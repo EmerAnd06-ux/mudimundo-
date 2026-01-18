@@ -1,5 +1,7 @@
 export const loader = () => null;
 import { Link } from "react-router";
+import ABURRIDO from "C:/Users/usuario/Documents/proyecto_lenguaje/assets/src/assets/senas/ABURRIDO.png";
+import AYER from "C:/Users/usuario/Documents/proyecto_lenguaje/assets/src/assets/senas/AYER.png";
 export default function Inicio() {
   return (
     <div className="flex min-h-screen bg-[#D9D2CE]">
@@ -18,6 +20,11 @@ export default function Inicio() {
 
           <button className="flex items-center gap-4 px-4 py-3 bg-[#F4EBD6] rounded-md hover:bg-[#e2d7c0] transition">
             <Link to="alfabeto"><span className="text-[22px]">📘</span> Alfabeto</Link>
+          </button>
+
+          
+          <button className="flex items-center gap-4 px-4 py-3 bg-[#F4EBD6] rounded-md hover:bg-[#e2d7c0] transition">
+            <Link to="/Copia"><span className="text-[22px]">📋</span> Copia</Link>
           </button>
 
           <button className="flex items-center gap-4 px-4 py-3 bg-[#F4EBD6] rounded-md hover:bg-[#e2d7c0] transition">
