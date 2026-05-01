@@ -1,105 +1,119 @@
-export const loader = () => null;
-import { Link } from "react-router";
-import ABURRIDO from "C:/Users/usuario/Documents/proyecto_lenguaje/assets/src/assets/senas/ABURRIDO.png";
-import AYER from "C:/Users/usuario/Documents/proyecto_lenguaje/assets/src/assets/senas/AYER.png";
+import { Link } from "react-router-dom";
+// Importación de recursos
+import gif1 from "../assets/senas/Gif1.gif";
+
 export default function Inicio() {
   return (
     <div className="flex min-h-screen bg-[#D9D2CE]">
+      
+      {/* SIDEBAR - Mantenemos el ancho de 280px para consistencia */}
+      <aside className="w-[280px] bg-[#EADFC9] p-8 flex flex-col justify-between shadow-md fixed h-full">
+        <div className="flex flex-col gap-10">
+          <h2 className="text-[22px] font-bold text-[#000] leading-tight">
+            Aprendizaje de <br /> Lengua de Señas
+          </h2>
 
-      {/* SIDEBAR */}
-      <aside className="w-[280px] bg-[#EADFC9] p-8 flex flex-col gap-10 shadow-md">
-        <h2 className="text-[20px] font-semibold text-[#000] leading-tight">
-          Aprendizaje de <br /> Lengua de Señas
-        </h2>
+          {/* MENÚ ORGANIZADO */}
+          <nav className="flex flex-col gap-4 text-[18px]">
+            <Link 
+              to="/" 
+              className="flex items-center gap-4 px-4 py-3 bg-[#F4EBD6] rounded-xl hover:bg-[#CFC7BD] transition-all font-medium"
+            >
+              <span className="text-[22px]">🏠</span> Inicio
+            </Link>
 
-        {/* MENÚ */}
-        <nav className="flex flex-col gap-4 text-[18px]">
-          <button className="flex items-center gap-4 px-4 py-3 bg-[#F4EBD6] rounded-md hover:bg-[#e2d7c0] transition">
-            <Link to="inicio"><span className="text-[22px]">🏠</span> inicio</Link>
-          </button>
+            <Link 
+              to="/alfabeto" 
+              className="flex items-center gap-4 px-4 py-3 bg-[#F4EBD6] rounded-xl hover:bg-[#CFC7BD] transition-all font-medium"
+            >
+              <span className="text-[22px]">📘</span> Alfabeto
+            </Link>
 
-          <button className="flex items-center gap-4 px-4 py-3 bg-[#F4EBD6] rounded-md hover:bg-[#e2d7c0] transition">
-            <Link to="alfabeto"><span className="text-[22px]">📘</span> Alfabeto</Link>
-          </button>
+            <Link 
+              to="/frases" 
+              className="flex items-center gap-4 px-4 py-3 bg-[#F4EBD6] rounded-xl hover:bg-[#CFC7BD] transition-all font-medium"
+            >
+              <span className="text-[22px]">📚</span> Frases
+            </Link>
 
-          
-          <button className="flex items-center gap-4 px-4 py-3 bg-[#F4EBD6] rounded-md hover:bg-[#e2d7c0] transition">
-            <Link to="/Copia"><span className="text-[22px]">📋</span> Copia</Link>
-          </button>
-
-          <button className="flex items-center gap-4 px-4 py-3 bg-[#F4EBD6] rounded-md hover:bg-[#e2d7c0] transition">
-            <Link to="frases"><span className="text-[22px]">📚</span> frases</Link>
-          </button>
-
-          <button className="flex items-center gap-4 px-4 py-3 bg-[#F4EBD6] rounded-md hover:bg-[#e2d7c0] transition">
-          <Link to="taller"><span className="text-[22px]">🎓</span> taller</Link>
-          </button>
-        </nav>
-
-        {/* TEXTO INFERIOR */}
-        <p className="text-[15px] text-gray-700">
-          ¿Por qué aprender lenguaje de señas? El lenguaje de señas abre puertas
-          a conexiones significativas y a una comunicación inclusiva.
-        </p>
-      </aside>
-
-      {/* CONTENIDO PRINCIPAL */}
-      <section className="flex-1 bg-white p-16">
-        <h1 className="text-3xl font-bold text-center text-[#222]">
-          Bienvenido al Aprendizaje <br /> de Lengua de Señas
-        </h1>
-
-        <p className="text-center mt-6 max-w-2xl mx-auto text-gray-700 text-[17px]">
-          Embárcate en tu viaje para aprender lenguaje de señas. Nuestra plataforma 
-          interactiva hace que sea fácil y entretenido comunicarte con la comunidad 
-          sorda y con dificultades auditivas.
-        </p>
-
-        {/* TARJETAS */}
-        <div className="mt-14 flex flex-col gap-6 max-w-2xl mx-auto">
-
-          {/* CARD 1 */}
-          <div className="flex items-center gap-4 bg-[#ECECEC] p-6 rounded-lg shadow-sm">
-            <span className="text-4xl">📘</span>
-            <div>
-              <h3 className="font-bold text-[20px]">Aprende el alfabeto</h3>
-              <p className="text-gray-700 text-[15px]">
-                Domina los fundamentos del lenguaje de señas con nuestra guía completa del alfabeto.
-              </p>
-            </div>
-          </div>
-
-          {/* CARD 2 */}
-          <div className="flex items-center gap-4 bg-[#ECECEC] p-6 rounded-lg shadow-sm">
-            <span className="text-4xl">📝</span>
-            <div>
-              <h3 className="font-bold text-[20px]">Frases Básicas</h3>
-              <p className="text-gray-700 text-[15px]">
-                Amplía tu vocabulario con frases esenciales para la comunicación diaria.
-              </p>
-            </div>
-          </div>
-
-          {/* CARD 3 */}
-          <div className="flex items-center gap-4 bg-[#ECECEC] p-6 rounded-lg shadow-sm">
-            <span className="text-4xl">🧩</span>
-            <div>
-              <h3 className="font-bold text-[20px]">Taller de Práctica</h3>
-              <p className="text-gray-700 text-[15px]">
-                Pon a prueba tus conocimientos y mejora tus habilidades con ejercicios interactivos.
-              </p>
-            </div>
-          </div>
+            <Link 
+              to="/taller" 
+              className="flex items-center gap-4 px-4 py-3 bg-[#F4EBD6] rounded-xl hover:bg-[#CFC7BD] transition-all font-medium"
+            >
+              <span className="text-[22px]">🎓</span> Taller
+            </Link>
+          </nav>
         </div>
 
-      </section>
+        {/* CONTENIDO INFERIOR SIDEBAR */}
+        <div className="flex flex-col gap-6">
+          <p className="text-[14px] text-gray-700 italic leading-relaxed">
+            "El lenguaje de señas abre puertas a conexiones significativas y a una comunicación inclusiva."
+          </p>
+          <div className="bg-white/30 p-2 rounded-lg backdrop-blur-sm">
+            <img src={gif1} alt="Mano saludando" className="w-full h-auto rounded-md" />
+          </div>
+        </div>
+      </aside>
 
-    {/* <main className="flex-1 p-10 bg-white">
-        <h1 className="text-4xl font-bold mb-4">Inicio</h1>
-        <p className="text-lg text-gray-700">
-          Bienvenido al aprendizaje de Lengua de Señas.
-        </p>
-    </main> */}
+      {/* CONTENIDO PRINCIPAL - Añadimos margen izquierdo para no quedar bajo el sidebar fixed */}
+      <main className="flex-1 ml-[280px] bg-white p-16">
+        <div className="max-w-3xl mx-auto">
+          <header className="text-center mb-14">
+            <h1 className="text-4xl font-black text-[#222] mb-6">
+              Bienvenido al Aprendizaje <br /> de Lengua de Señas
+            </h1>
+            <p className="text-gray-600 text-[18px] leading-relaxed">
+              Embárcate en tu viaje para aprender lenguaje de señas. Nuestra plataforma
+              interactiva hace que sea fácil y entretenido comunicarte con la comunidad.
+            </p>
+          </header>
+
+          {/* TARJETAS DE ACCESO RÁPIDO */}
+          <div className="flex flex-col gap-6">
+            
+            {/* CARD 1 */}
+            <div className="flex items-center gap-6 bg-[#F8F8F8] border border-gray-100 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+              <div className="bg-[#EADFC9] w-16 h-16 flex items-center justify-center rounded-full text-3xl">
+                📘
+              </div>
+              <div>
+                <h3 className="font-bold text-[20px] text-[#222]">Aprende el alfabeto</h3>
+                <p className="text-gray-600 text-[15px] mt-1">
+                  Domina los fundamentos del lenguaje de señas con nuestra guía completa del alfabeto.
+                </p>
+              </div>
+            </div>
+
+            {/* CARD 2 */}
+            <div className="flex items-center gap-6 bg-[#F8F8F8] border border-gray-100 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+              <div className="bg-[#EADFC9] w-16 h-16 flex items-center justify-center rounded-full text-3xl">
+                📝
+              </div>
+              <div>
+                <h3 className="font-bold text-[20px] text-[#222]">Frases Básicas</h3>
+                <p className="text-gray-600 text-[15px] mt-1">
+                  Amplía tu vocabulario con frases esenciales para la comunicación diaria.
+                </p>
+              </div>
+            </div>
+
+            {/* CARD 3 */}
+            <div className="flex items-center gap-6 bg-[#F8F8F8] border border-gray-100 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+              <div className="bg-[#EADFC9] w-16 h-16 flex items-center justify-center rounded-full text-3xl">
+                🧩
+              </div>
+              <div>
+                <h3 className="font-bold text-[20px] text-[#222]">Taller de Práctica</h3>
+                <p className="text-gray-600 text-[15px] mt-1">
+                  Pon a prueba tus conocimientos y mejora tus habilidades con ejercicios interactivos.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </main>
     </div>
   );
 }
